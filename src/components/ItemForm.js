@@ -32,9 +32,9 @@ const ItemForm = ({ item, onSave, onCancel }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white shadow-md rounded-lg p-4 mb-4 w-full max-w-lg mx-auto"
+      className="bg-gray-100 shadow-md rounded-lg p-4 mb-4 w-full max-w-lg mx-auto"
     >
-      <h2 className="text-xl font-semibold mb-4">
+      <h2 className="text-2xl font-mono text-black  mb-4">
         {item ? "Edit Item" : "Add Item"}
       </h2>
       {alertMessage && (
@@ -49,22 +49,24 @@ const ItemForm = ({ item, onSave, onCancel }) => {
         </div>
       )}
       <label className="block mb-2">
-        <span className="text-gray-700">Name</span>
+        <span className="font-mono text-black">Item Name</span>
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+          className="bg-white border border-gray-400 w-full px-3 py-2  rounded-md focus:ring focus:ring-blue-300"
           required
+          placeholder="Item name"
         />
       </label>
       <label className="block mb-4">
-        <span className="text-gray-700">Description</span>
+        <span className="text-black font-mono">Item Description</span>
         <textarea
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+          className="bg-white border border-gray-400 w-full px-3 py-2 rounded-md focus:ring focus:ring-blue-300"
           required
+          placeholder="Item description"
         />
       </label>
       <div className="flex space-x-2">

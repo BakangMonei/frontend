@@ -70,8 +70,8 @@ const App = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">CRUD Application</h1>
+    <div className="mx-auto p-4">
+      <h1 className=" text-5xl font-bold mb-4">CRUD Application</h1>
       <ItemForm
         item={editingItem}
         onSave={handleSave}
